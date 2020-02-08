@@ -1,0 +1,14 @@
+<div clas="container">
+    <h3>Your Subscription</h3>
+</div>
+<div class="container" [hidden]=QRhide>
+<ngx-qrcode qrc-element-type="url" [qrc-value]="QRcode" size=60px></ngx-qrcode>
+<h4> {{ QRcode }} </h4>
+<h3>Valid Till: {{ sub?.expair }}</h3>
+</div>
+<div [hidden]=subhidden clas="container">
+  One Month 200 INR<input type="radio" placeholder="Enter pack" name="pack" value=200 checked [(ngModel)]="pack"><br>
+  Two Month 350 INR<input type="radio" placeholder="Enter pack" name="pack" value=350 required  [(ngModel)]="pack"><br>
+  Three Month 500 INR<input type="radio" placeholder="Enter pack" name="pack" value=500 required  [(ngModel)]="pack"><br><br>
+  <button class='btn btn-info' (click)="Buysub()">Buy</button> 
+</div>

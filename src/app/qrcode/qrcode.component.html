@@ -1,0 +1,10 @@
+<h3>SCAN QR CODE</h3>
+<div class="container" [hidden]=cam>
+<qr-scanner [debug]="false" [canvasWidth]="640" [canvasHeight]="480" [stopAfterScan]="true" [updateTime]="500">
+  
+</qr-scanner>
+</div>
+<div [hidden]=hidee>
+<button class="btn btn-primary" (click)="scancode()"> Scan Again </button>
+</div>
+<h3>Subscription {{valid}}</h3>

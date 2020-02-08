@@ -1,0 +1,14 @@
+<form style="max-width:500px;margin:auto" >
+    <div >
+        <h2>Bus Login</h2>
+        <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" placeholder="Enter Bus ID." name="mob" [(ngModel)]="busid">
+        </div>
+        <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input class="input-field" type="text" placeholder="Enter One Time Password" name="otp" [(ngModel)]="OTP">
+        </div>
+        <button class="btn" (click)="OTPLogin()">{{btntext}}</button>
+   </div>
+</form>

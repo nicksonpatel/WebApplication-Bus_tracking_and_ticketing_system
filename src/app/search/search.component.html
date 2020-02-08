@@ -1,0 +1,22 @@
+<div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+    <h3>Travel the city with us</h3>
+    <div class="w3-row-padding" style="margin:0 -16px;">
+    <div class="w3-half">
+      <label>From</label>
+      <input class="w3-input w3-border" type="text" placeholder="Departing from" [(ngModel)]="source">
+    </div>
+    <div class="w3-half">
+      <label>To</label>
+      <input class="w3-input w3-border" type="text" placeholder="Arriving at" [(ngModel)]="destination">
+    </div>
+    </div>
+    <br>
+    <p><button class="w3-button w3-dark-grey" (click)=" Serarchbus()">Search Buses</button></p>
+  </div>
+  <div class="col-lg-8" *ngFor="let bs of Bus">
+    <div class="col-lg-6" style="background-color:#ccc;" >
+      <p><b>Bus Number</b> {{bs.bus_num}}</p>
+      <p><b>Bus Number Plate:</b> {{bs.bus_numberPalte}}</p>
+      <p><b>Bus Capacity:</b> {{bs.bus_capacity}} &nbsp;<button class="btn btn-succes" [routerLink]="['/home/mapview',{foo:bs.bus_id}]">Track Bus</button></p>
+    </div>
+  </div>

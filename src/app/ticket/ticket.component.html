@@ -1,0 +1,19 @@
+<div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+  <h3>Send Tickets</h3>
+  <div class="w3-row-padding" style="margin:0 -16px;">
+  <div class="w3-half">
+    <label>From</label>
+    <input class="w3-input w3-border" type="text" placeholder="Departing from" [(ngModel)]="source">
+  </div>
+  <div class="w3-half">
+    <label>To</label>
+    <input class="w3-input w3-border" type="text" placeholder="Arriving at" [(ngModel)]="destination">
+  </div>
+  <div class="w3-half">
+    <label>Mobile</label>
+    <input class="w3-input w3-border" type="text" placeholder="Mobile Number" [(ngModel)]="mobile">
+  </div>
+  </div>
+  <br>
+  <p><button class="w3-button w3-dark-grey" (click)="generateticket()">Send Ticket</button></p>
+</div>
